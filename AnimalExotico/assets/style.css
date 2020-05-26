@@ -1,0 +1,19 @@
+/* */
+.content {
+  padding: 10px;
+  position:relative;
+  float:right;
+  width:48%;
+}
+
+.text {
+  padding: 10px;
+  position:relative;
+  float:right;
+  width:48%;
+}
+
+.refs {
+  position: fixed;
+  width:100%;
+}

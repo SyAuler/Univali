@@ -1,0 +1,16 @@
+/* */
+.image {
+  position:relative;
+  float:right;
+  width:48%;
+}
+
+.text {
+  position:relative;
+  float:right;
+  width:48%;
+}
+
+.refs {
+  width:100%;
+}
