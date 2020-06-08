@@ -1,14 +1,20 @@
-.li {
+.content {
+  padding: 15px 20%;
+}
+
+.card {
+  list-style-type: none;
+  color:blueviolet;
+}
+
+.navigator {
   float: left;
   padding: 10px;
   margin: 0;
   background: rgb(240, 240, 240);
 }
-.ul {
-  list-style-type: none;
-  color: black;
-}
-.li:hover {
+
+.navigator:hover {
   background: lightgray;
   font-weight: bold;
   cursor: pointer;
