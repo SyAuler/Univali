@@ -1,0 +1,73 @@
+.icone-menu {
+    width: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.navbar{
+    position: fixed;    
+    width: 100%;
+    height: 80px;
+    left: 0;
+    top: 0;
+    background-color: #3D0460;
+}
+.navbar-nav {
+    width: 30%;
+    padding-left: 20px;
+}
+
+.nav-home {
+    width: 40%;
+    display: flex;
+}
+
+.navbar-brand{
+    display: flex;
+    position: relative;
+    text-align: center;
+}
+
+.carousel-caption{
+    width: 70%;
+    z-index: 0;
+    background-color: black;
+    opacity: 0.7;
+}
+
+.content-overlay{
+    width: 100%;
+    z-index: 0;
+    background-color: black;
+    opacity: 0.7;
+}
+
+.card-body {
+    display: flex;
+    position: relative;
+    width: 10%;
+}
+
+.carousel-control-prev {
+
+}
+
+.bloco-dois, .bloco-tres, .bloco-quatro, .bloco-cinco, .bloco-seis {
+    margin-top: 50px;
+}
+
+footer {
+    color: white;
+    padding: 20px 0;
+    background-color: #3D0460;
+}
+
+.a-rodape {
+    text-decoration: none;
+    color: white;
+}
+
+.a-rodape:hover {
+    text-decoration: none;
+    color: white;
+}
