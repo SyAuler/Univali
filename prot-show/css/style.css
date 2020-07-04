@@ -1,4 +1,36 @@
 
+.btn-dark {
+    background-color: #343a40;
+}
+
+.btn-purple {
+    color: #fff;
+    background-color: #3D0460;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    border: 1px solid transparent;
+    padding: .395rem .95rem;
+        transition: color .15s ease-in-out,
+        background-color .15s ease-in-out,
+        border-color .15s ease-in-out,
+        box-shadow .15s ease-in-out;
+}
+
+.btn-purple a:hover { 
+    color: #fff;
+    opacity: 0.6;
+    text-decoration: none;
+        -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        transform: scale(0.8);
+}
+
+p {
+    margin: 5px;
+}
+
 .icone-menu {
     width: 50px;
     padding-left: 10px;
@@ -15,19 +47,26 @@
 }
 
 .navbar-nav {
-    width: 30%;
     padding-left: 20px;
+    padding-right: 20px;
 }
 
-.nav-home {
+.nav-link {
+    color: #fff;
+    font-size: 1rem;
+}
+
+.navbar-brand {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.navbar-collapse {
     width: 40%;
+    border: none;
     display: flex;
-}
-
-.navbar-brand{
-    display: flex;
-    position: relative;
-    text-align: center;
+    position: relative; 
 }
 
 .carousel-caption{
@@ -42,6 +81,12 @@
     z-index: 0;
     background-color: black;
     opacity: 0.7;
+}
+
+.player {
+    padding-top: 50px;
+    margin: 0 15%;
+
 }
 
 .card-header {
@@ -68,7 +113,7 @@
     text-align: center;
 }
 .card-title .show-title{
-    background-color: purple;
+    background-color: #3D0460;
 
 }
 
@@ -80,18 +125,22 @@
 .card-body {
     display: flex;
     position: relative;
-    width: 10%;
 }
 
-.carousel-control-prev {
-
-}
-
-.bloco-dois, .bloco-tres, .bloco-quatro, .bloco-cinco, .bloco-seis {
+.bloco-dois, .bloco-tres, .bloco-quatro, .bloco-cinco {
     margin-top: 50px;
+    margin-bottom: 50px;
 }
 
-footer {
+.bloco-cinco {
+    padding-bottom: 70px;
+}
+
+.footer {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
     color: white;
     padding: 20px 0;
     background-color: #3D0460;
