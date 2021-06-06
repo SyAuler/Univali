@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">app_loc</string>
+    <string name="gerenciar_modelos">Gerenciar Modelos</string>
+    <string name="listar_modelos">Listar Modelos</string>
+    <string name="adicionar_modelos">Adicionar Modelos</string>
+    <string name="gerenciar_veiculos">Gerenciar Veículos</string>
+    <string name="listar_veiculos">Listar Veículos</string>
+    <string name="adicionar_veiculos">Adicionar Veículos</string>
+    <string name="marca">Marca</string>
+    <string name="modelo">Modelo</string>
+    <string name="valor">Valor da Diária</string>
+    <string name="descricao">Descrição</string>
+    <string name="salvar">Salvar</string>
+    <string name="descricao_veiculo">Descrição do Veículo</string>
+    <string name="cor">Cor</string>
+    <string name="ano">Ano</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="adicionar_veiculo">Adicionar Veículo</string>
+    <string name="editar_modelo">Editar Modelo</string>
+    <string name="excluir">Excluir</string>
+    <string name="editar_veiculo">Editar Veículo</string>
+    <string name="menu_modelo">Modelos</string>
+    <string name="menu_veiculo">Veículos</string>
+    <string name="gerenciar_clientes">Gerenciar Clientes</string>
+    <string name="listar_clientes">Listar Clientes</string>
+    <string name="adicionar_cliente">Adicionar Cliente</string>
+    <string name="nome">Nome</string>
+    <string name="cpf">CPF</string>
+    <string name="telefone">Telefone</string>
+    <string name="email">E-mail</string>
+    <string name="senha">Senha</string>
+    <string name="editar_cliente">Editar Cliente</string>
+        <string name="menu_cliente">Clientes</string>
+</resources>
