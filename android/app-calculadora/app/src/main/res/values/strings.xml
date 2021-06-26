@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Calculadora</string>
+    <string name="historico">Histórico</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="listar_historico">Listar Histórico</string>
+    <string name="menu_historico">Histórico</string>
 </resources>
