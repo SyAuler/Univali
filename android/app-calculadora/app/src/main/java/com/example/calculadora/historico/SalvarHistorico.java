@@ -1,8 +1,11 @@
 package com.example.calculadora.historico;
 
+import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,11 +18,10 @@ import androidx.fragment.app.Fragment;
 
 import com.example.calculadora.R;
 
-public class SalvarHistorico extends Fragment {
-    EditText etExpressao;
-    EditText etResultado;
+import java.util.ArrayList;
+import java.util.List;
 
-    public SalvarHistorico() { }
+public class SalvarHistorico extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -32,9 +34,6 @@ public class SalvarHistorico extends Fragment {
         View v = inflater.inflate(R.layout.activity_calculadora, container, false);
         Button btn = (Button) v.findViewById(R.id.igual);
 
-        //  etExpressao = (EditText) v.findViewById(R.id.editText_DescricaoAdicionarVeiculo);
-        //  etResultado = (EditText) v.findViewById(R.id.editText_ModeloAdicionarVeiculo);
-
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -46,8 +45,6 @@ public class SalvarHistorico extends Fragment {
     }
 
     public void salvarDados(String expressao, String resultado) {
-       // String expressao = etExpressao.getText().toString().trim();
-       // String resultado = etResultado.getText().toString().trim();
         if (expressao.equals("")) {
             Toast.makeText(getContext(), "Por favor, informe um valor!", Toast.LENGTH_LONG).show();
         } else {
@@ -65,9 +62,6 @@ public class SalvarHistorico extends Fragment {
             } catch (SQLException e) {
                 Toast.makeText(getContext(), "Erro ao salvar os dados!" + e.getMessage(), Toast.LENGTH_LONG).show();
             }
-            etExpressao.setText("");
-            etResultado.setText("");
-
             db.close();
         }
     }

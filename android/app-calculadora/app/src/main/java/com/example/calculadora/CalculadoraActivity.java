@@ -1,7 +1,6 @@
 package com.example.calculadora;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
@@ -9,13 +8,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.example.calculadora.historico.SalvarHistorico;
-
 import net.objecthunter.exp4j.Expression;
 import net.objecthunter.exp4j.ExpressionBuilder;
+
+import static com.example.calculadora.R.string.message_informe_um_valor;
 
 public class CalculadoraActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -26,7 +25,7 @@ public class CalculadoraActivity extends AppCompatActivity implements View.OnCli
     private TextView txtExpressao, txtResultado;
     private ImageView backspace;
 
-    //SalvarHistorico salvarHistorico = new SalvarHistorico();
+    private ListView listView_Historico;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,10 +33,10 @@ public class CalculadoraActivity extends AppCompatActivity implements View.OnCli
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculadora);
 
+        listView_Historico = (ListView) findViewById(R.id.listView_Historico);
+
         IniciarComponentes();
         criarBancoDados();
-
-        //getSupportActionBar().hide(); //esconde a NavBar
 
         //definir os eventos de click em cada componente do tipo button
         //para recuperar o click a partir do contexto atual
@@ -89,7 +88,8 @@ public class CalculadoraActivity extends AppCompatActivity implements View.OnCli
                 try {
                     // responsável por fazer todos os cálculos
                     Expression expression = new ExpressionBuilder(txtExpressao.getText().toString()).build();
-                    double resultado = expression.evaluate(); //vai avaliar a expressão e fazer todos os tratamentos necessários
+                    //vai avaliar a expressão e fazer todos os tratamentos necessários
+                    double resultado = expression.evaluate();
                     long longResult = (long) resultado;
 
                     if (resultado == (double)longResult) {
@@ -98,14 +98,9 @@ public class CalculadoraActivity extends AppCompatActivity implements View.OnCli
                     } else {
                         txtResultado.setText((CharSequence) String.valueOf(resultado));
                     }
-                   // String expre = txtExpressao.getText().toString().trim();
-                    //String result = txtResultado.getText().toString().trim();
-                    //salvarHistorico.salvarDados(expre, result);
-                    //salvarDados();
                 } catch (Exception e) {
                     Toast.makeText(getApplicationContext(), "Erro " + e.getMessage(), Toast.LENGTH_LONG).show();
                 }
-
                 salvarDados();
             }
         });
@@ -209,11 +204,11 @@ public class CalculadoraActivity extends AppCompatActivity implements View.OnCli
         }
     }
 
-    public void salvarDados() { //String expressao, String resultado
+    public void salvarDados() {
          String expressao = txtExpressao.getText().toString().trim();
          String resultado = txtResultado.getText().toString().trim();
         if (expressao.equals("")) {
-            Toast.makeText(getApplicationContext(), "Por favor, informe um valor!", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), message_informe_um_valor, Toast.LENGTH_LONG).show();
         } else {
             SQLiteDatabase db = openOrCreateDatabase("dbCalculator.db", Context.MODE_PRIVATE, null);
 
@@ -225,13 +220,11 @@ public class CalculadoraActivity extends AppCompatActivity implements View.OnCli
 
             try {
                 db.execSQL(sql.toString());
-                Toast.makeText(getApplicationContext(), "Dados salvos com sucesso!", Toast.LENGTH_LONG).show();
-            } catch (SQLException e) {
-                Toast.makeText(getApplicationContext(), "Erro ao salvar os dados!" + e.getMessage(), Toast.LENGTH_LONG).show();
-            }
-            txtExpressao.setText("");
-            txtResultado.setText("");
+                Toast.makeText(getApplicationContext(), R.string.message_dados_salvos_com_sucesso, Toast.LENGTH_LONG).show();
 
+            } catch (SQLException e) {
+                Toast.makeText(getApplicationContext(), getString(R.string.message_erro_ao_salvar_os_dados) + e.getMessage(), Toast.LENGTH_LONG).show();
+            }
             db.close();
         }
     }
