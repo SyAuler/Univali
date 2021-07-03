@@ -3,9 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".modelo.EditarFragment">
+    tools:context=".modelo.EditarModelo">
 
-    <LinearLayout
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -52,14 +55,14 @@
             android:inputType="textPersonName" />
 
         <TextView
-            android:id="@+id/textView_ValorEditarModelo"
+            android:id="@+id/textView_ValorDiariaEditarModelo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="@string/valor" />
 
         <EditText
-            android:id="@+id/editText_ValorEditarModelo"
+            android:id="@+id/editText_ValorDiariaEditarModelo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
@@ -102,4 +105,5 @@
         </LinearLayout>
 
     </LinearLayout>
+    </ScrollView>
 </FrameLayout>

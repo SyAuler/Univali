@@ -4,7 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -28,7 +31,7 @@
             android:text="@string/marca" />
 
         <EditText
-            android:id="@+id/editText_CPFAdicionarCliente"
+            android:id="@+id/editText_MarcaAdicionarModelo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
@@ -58,7 +61,7 @@
             android:text="@string/valor" />
 
         <EditText
-            android:id="@+id/editText_ValorAdicionarModelo"
+            android:id="@+id/editText_ValorDiariaAdicionarModelo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
@@ -73,18 +76,31 @@
             android:text="@string/descricao" />
 
         <EditText
-            android:id="@+id/editText_DescricaoAdicionarModelo2"
+            android:id="@+id/editText_DescricaoAdicionarModelo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:ems="10"
-            android:inputType="phone" />
+            android:layout_marginBottom="10dp"/>
 
-        <Button
-            android:id="@+id/button_SalvarAdicionarModelo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="@string/salvar" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button_ExcluirAdicionarModelo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/excluir" />
+
+                <Button
+                    android:id="@+id/button_SalvarAdicionarModelo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/salvar" />
+            </LinearLayout>
     </LinearLayout>
+    </ScrollView>
 </FrameLayout>

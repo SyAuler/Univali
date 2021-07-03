@@ -9,9 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.App_loc">
-        <activity android:name=".ModeloActivity"></activity>
-        <activity android:name=".ClienteActivity"></activity>
-        <activity android:name=".VeiculoActivity">
+        <activity android:name=".VeiculoActivity"></activity>
+        <activity android:name=".ModeloActivity" />
+        <activity android:name=".ClienteActivity" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,4 +20,7 @@
             </intent-filter>
         </activity>
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
 </manifest>

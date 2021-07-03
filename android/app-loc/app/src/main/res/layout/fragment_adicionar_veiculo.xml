@@ -3,16 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".veiculo.AdicionarFragment">
+    tools:context=".veiculo.AdicionarVeiculo">
 
-    <LinearLayout
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="15dp">
 
         <TextView
-            android:id="@+id/textView_EditarCliente"
+            android:id="@+id/textView_EditarVeiculo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -22,14 +25,14 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textView_NomeAdicionarCliente"
+            android:id="@+id/textView_DescricaoAdicionarVeiculo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="@string/descricao_veiculo" />
 
         <EditText
-            android:id="@+id/editText_NomeAdicionarCliente"
+            android:id="@+id/editText_DescricaoAdicionarVeiculo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
@@ -37,14 +40,14 @@
             android:inputType="textPersonName" />
 
         <TextView
-            android:id="@+id/textView_CPFAdicionarCliente"
+            android:id="@+id/textView_ModeloAdicionarVeiculo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="@string/modelo" />
 
         <EditText
-            android:id="@+id/editText_CPFAdicionarCliente"
+            android:id="@+id/editText_ModeloAdicionarVeiculo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
@@ -52,14 +55,14 @@
             android:inputType="textPersonName" />
 
         <TextView
-            android:id="@+id/textView_TelefoneAdicionarCliente"
+            android:id="@+id/textView_CorAdicionarVeiculo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="@string/cor" />
 
         <EditText
-            android:id="@+id/editText_TelefoneAdicionarCliente"
+            android:id="@+id/editText_CorAdicionarVeiculo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
@@ -67,14 +70,14 @@
             android:inputType="textPersonName" />
 
         <TextView
-            android:id="@+id/textView_EmailAdicionarCliente"
+            android:id="@+id/textView_AnoAdicionarVeiculo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="@string/ano" />
 
         <EditText
-            android:id="@+id/editText_EmailAdicionarCliente"
+            android:id="@+id/editText_AnoAdicionarVeiculo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
@@ -87,7 +90,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button_CancelarEditarCliente"
+                android:id="@+id/button_CancelarEditarVeiculo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -95,7 +98,7 @@
                 android:text="@string/cancelar" />
 
             <Button
-                android:id="@+id/button_SalvarEditarCliente"
+                android:id="@+id/button_SalvarEditarVeiculo"
                 android:layout_width="195dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -103,4 +106,5 @@
         </LinearLayout>
 
     </LinearLayout>
+    </ScrollView>
 </FrameLayout>

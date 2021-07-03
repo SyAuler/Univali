@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".veiculo.EditarVeiculo">
+    tools:context=".locacoes.EditarLocacao">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -15,73 +15,83 @@
         android:padding="15dp">
 
         <TextView
-            android:id="@+id/textView_EditarVeiculo"
+            android:id="@+id/textView_EditarLocacao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:text="@string/editar_veiculo"
+            android:text="@string/editar_locacao"
             android:textAlignment="center"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textView_DescricaoEditarVeiculo"
+            android:id="@+id/textView_ClienteEditarLocacao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="@string/descricao_veiculo" />
+            android:text="@string/cliente_descricao" />
 
         <EditText
-            android:id="@+id/editText_DescricaoEditarVeiculo"
+            android:id="@+id/editText_ClienteEditarLocacao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:ems="10"
             android:inputType="textPersonName" />
 
         <TextView
-            android:id="@+id/textView_ModeloEditarVeiculo"
+            android:id="@+id/textView_VeiculoEditarLocacao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="@string/modelo" />
+            android:text="@string/veiculo_locacao" />
 
         <EditText
-            android:id="@+id/editText_ModeloEditarVeiculo"
+            android:id="@+id/editText_VeiculoEditarLocacao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:ems="10"
             android:inputType="textPersonName" />
 
         <TextView
-            android:id="@+id/textView_CorEditarVeiculo"
+            android:id="@+id/textView_DataRetiradaEditarLocacao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="@string/cor" />
+            android:text="@string/retirada_locacao" />
 
         <EditText
-            android:id="@+id/editText_CorEditarVeiculo"
+            android:id="@+id/editText_DataRetiradaEditarLocacao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:ems="10"
             android:inputType="textPersonName" />
 
         <TextView
-            android:id="@+id/textView_AnoEditarVeiculo"
+            android:id="@+id/textView_DataDevolucaoEditarLocacao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="@string/ano" />
+            android:text="@string/devolucao_locacao" />
 
         <EditText
-            android:id="@+id/editText_AnoEditarVeiculo"
+            android:id="@+id/editText_DataDevolucaoEditarLocacao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/textView_ValorEditarLocacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/valor_locacao" />
+
+        <EditText
+            android:id="@+id/editText_ValorEditarLocacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:inputType="textPersonName" />
 
         <LinearLayout
@@ -91,19 +101,18 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button_ExcluirEditarVeiculo"
+                android:id="@+id/button_ExcluirEditarLocacao"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/excluir" />
             <Button
-                android:id="@+id/button_SalvarEditarVeiculo"
+                android:id="@+id/button_SalvarEditarLocacao"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/salvar" />
         </LinearLayout>
-
     </LinearLayout>
     </ScrollView>
 </FrameLayout>

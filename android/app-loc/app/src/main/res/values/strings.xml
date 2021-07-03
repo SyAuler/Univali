@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">app_loc</string>
+    <string name="app_name">UniCars</string>
     <string name="gerenciar_modelos">Gerenciar Modelos</string>
     <string name="listar_modelos">Listar Modelos</string>
     <string name="adicionar_modelos">Adicionar Modelos</string>
@@ -30,5 +30,20 @@
     <string name="email">E-mail</string>
     <string name="senha">Senha</string>
     <string name="editar_cliente">Editar Cliente</string>
-        <string name="menu_cliente">Clientes</string>
+    <string name="menu_cliente">Clientes</string>
+    <string name="cep">CEP</string>
+    <string name="logradouro">Logradouro</string>
+    <string name="gerenciar_locacoes">Gerenciar Locações</string>
+    <string name="adicionar_locacao">Adicionar Locação</string>
+    <string name="listar_locacoes">Listar Locações</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="editar_locacao">Editar Locação</string>
+    <string name="cliente_descricao">Cliente</string>
+    <string name="veiculo_locacao">Carro</string>
+    <string name="retirada_locacao">Data Retirada</string>
+    <string name="devolucao_locacao">Data Devolução</string>
+    <string name="valor_locacao">Valor</string>
+    <string name="menu_locacao">Locações</string>
+
 </resources>
